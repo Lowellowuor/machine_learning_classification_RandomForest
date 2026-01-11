@@ -1,0 +1,68 @@
+{
+  "success": true,
+  "animal_type": "livestock",
+  "n_samples": 100,
+  "saved_to": "my_data.csv",
+  "sample_preview": [
+    {
+      "animal_type": "goats",
+      "age_months": 191,
+      "body_temperature": 37.96558354632649,
+      "feed_intake": "reduced",
+      "water_intake": "increased",
+      "milk_production": 22.63628622254047,
+      "county": "Uasin_Gishu",
+      "season": "short_rains",
+      "vaccination_status": "partial",
+      "disease_diagnosis": "east_coast_fever"
+    },
+    {
+      "animal_type": "sheep",
+      "age_months": 146,
+      "body_temperature": 37.00494612918566,
+      "feed_intake": "reduced",
+      "water_intake": "decreased",
+      "milk_production": 3.0937160650779783,
+      "county": "Nakuru",
+      "season": "cold",
+      "vaccination_status": "full",
+      "disease_diagnosis": "east_coast_fever"
+    },
+    {
+      "animal_type": "dairy_cattle",
+      "age_months": 218,
+      "body_temperature": 37.71074167130208,
+      "feed_intake": "normal",
+      "water_intake": "normal",
+      "milk_production": 27.076587200387,
+      "county": "Nakuru",
+      "season": "dry",
+      "vaccination_status": "full",
+      "disease_diagnosis": "east_coast_fever"
+    },
+    {
+      "animal_type": "goats",
+      "age_months": 44,
+      "body_temperature": 39.243711283771226,
+      "feed_intake": "normal",
+      "water_intake": "increased",
+      "milk_production": 15.157571173435715,
+      "county": "Nakuru",
+      "season": "short_rains",
+      "vaccination_status": "full",
+      "disease_diagnosis": "east_coast_fever"
+    },
+    {
+      "animal_type": "goats",
+      "age_months": 162,
+      "body_temperature": 38.28783857828837,
+      "feed_intake": "normal",
+      "water_intake": "normal",
+      "milk_production": 24.793723983232248,
+      "county": "Kisii",
+      "season": "dry",
+      "vaccination_status": "partial",
+      "disease_diagnosis": "healthy"
+    }
+  ]
+}
