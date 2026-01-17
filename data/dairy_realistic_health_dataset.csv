@@ -1,0 +1,101 @@
+body_temperature_c,milk_yield_l,milk_conductivity,feed_intake_kg,disease
+38.47,23.74,4.63,8.91,Healthy
+38.89,22.1,4.65,6.36,Negative Energy Balance
+39.17,15.48,7.81,14.43,Mastitis
+38.15,25.64,7.96,6.89,Negative Energy Balance
+38.08,32.59,5.68,7.49,Negative Energy Balance
+37.73,15.35,3.53,6.34,Negative Energy Balance
+38.74,14.75,5.4,7.24,Negative Energy Balance
+37.12,25.79,5.46,7.94,Negative Energy Balance
+37.77,15.89,4.12,15.37,Healthy
+38.49,15.54,8.28,10.87,Mastitis
+38.74,27.81,7.91,7.58,Negative Energy Balance
+38.1,29.33,7.8,9.65,Healthy
+39.59,14.63,7.86,14.39,Mastitis
+38.08,31.13,5.75,12.23,Healthy
+38.2,27.7,8.3,7.83,Negative Energy Balance
+38.01,9.37,3.84,11.23,Healthy
+38.18,20.88,6.08,16.05,Healthy
+38.84,12.43,3.57,12.08,Healthy
+37.82,28.85,6.92,7.01,Negative Energy Balance
+38.03,22.8,7.49,16.92,Healthy
+38.55,24.15,8.26,13.58,Healthy
+38.38,9.89,6.85,9.06,Mastitis
+39.09,12.2,6.73,14.37,Mastitis
+37.91,27.81,7.88,10.96,Healthy
+38.28,18.52,3.77,14.5,Healthy
+38.18,9.7,3.79,17.19,Healthy
+38.19,17.23,7.63,13.43,Mastitis
+38.88,15.15,5.75,16.27,Healthy
+37.86,29.61,3.88,10.92,Healthy
+38.63,23.47,4.74,16.62,Healthy
+38.07,12.12,3.81,12.86,Healthy
+38.75,13.06,6.21,15.83,Healthy
+38.06,18.35,5.59,11.52,Healthy
+37.61,28.43,5.03,10.12,Healthy
+37.97,25.02,5.5,16.99,Healthy
+38.33,30.18,4.65,8.91,Healthy
+38.65,8.28,6.65,10.74,Mastitis
+39.23,29.2,7.23,17.07,Healthy
+38.76,15.69,5.19,6.71,Negative Energy Balance
+38.63,31.41,4.27,12.62,Healthy
+39.18,18.48,4.21,10.6,Healthy
+38.52,9.3,5.01,13.56,Healthy
+37.57,30.51,4.19,9.86,Healthy
+38.67,33.3,4.7,14.79,Healthy
+38.53,25.77,4.55,9.93,Healthy
+38.08,22.86,6.45,7.85,Negative Energy Balance
+39.04,13.44,5.81,12.22,Healthy
+38.17,24.09,7.09,15.55,Healthy
+38.97,31.92,5.13,15.93,Healthy
+38.8,22.04,4.8,8.08,Healthy
+38.83,9.91,6.44,6.53,Negative Energy Balance
+39.14,18.56,6.36,13.8,Healthy
+39.13,29.51,5.3,12.92,Healthy
+38.65,27.4,7.87,11.9,Healthy
+38.31,13.92,4.97,14.76,Healthy
+38.88,31.9,5.86,14.35,Healthy
+38.51,19.74,5.66,8.26,Healthy
+37.93,24.82,6.86,13.64,Healthy
+38.36,31.02,6.36,16.58,Healthy
+39.33,19.07,7.0,8.36,Healthy
+38.27,24.7,8.17,15.23,Healthy
+38.43,34.66,8.18,11.47,Healthy
+38.9,32.59,3.51,15.81,Healthy
+37.81,28.64,6.95,7.53,Negative Energy Balance
+37.84,17.33,3.66,17.92,Healthy
+39.22,30.59,8.37,15.82,Healthy
+39.1,13.36,6.86,8.85,Mastitis
+38.43,18.6,7.86,11.1,Healthy
+38.61,15.93,4.8,6.04,Negative Energy Balance
+38.94,23.45,7.69,8.7,Healthy
+38.68,18.62,8.19,15.92,Healthy
+38.49,21.35,6.68,6.79,Negative Energy Balance
+39.31,14.22,3.76,6.35,Negative Energy Balance
+38.55,12.33,4.69,15.66,Healthy
+39.48,16.45,4.99,12.64,Healthy
+37.38,28.14,4.4,11.22,Healthy
+38.68,15.27,5.46,12.83,Healthy
+38.56,11.83,6.56,17.69,Mastitis
+38.42,11.18,6.09,17.66,Healthy
+37.62,22.64,4.57,9.73,Healthy
+39.0,20.24,5.95,15.71,Healthy
+38.68,10.84,8.26,11.58,Mastitis
+39.06,14.92,4.23,9.1,Healthy
+38.16,26.16,4.0,11.42,Healthy
+38.63,11.73,7.37,17.09,Mastitis
+37.72,16.62,5.27,13.18,Healthy
+39.0,29.4,5.69,15.87,Healthy
+38.78,22.77,4.43,9.43,Healthy
+39.11,29.66,7.07,8.56,Healthy
+39.58,18.73,7.39,11.5,Milk Fever
+37.57,21.8,5.0,9.24,Healthy
+38.25,25.86,7.48,10.91,Healthy
+38.46,18.84,5.68,8.88,Healthy
+37.88,28.78,4.51,6.46,Negative Energy Balance
+39.03,14.45,4.37,12.97,Healthy
+38.93,32.83,4.77,12.48,Healthy
+38.95,20.61,5.39,13.87,Healthy
+38.06,22.35,4.51,10.99,Healthy
+39.56,11.84,5.57,16.74,Milk Fever
+38.58,13.08,8.41,16.18,Mastitis
