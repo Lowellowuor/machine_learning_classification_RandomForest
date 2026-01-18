@@ -281,7 +281,7 @@ class AnimalDiseasePredictor:
             ]
         }
     
-    def generate_sample_data(self, animal_type_str: str, n_samples: int = 100, 
+    def generate_sample_data(self, animal_type_str: str, n_samples: int = 100,
                             save_path: str = None) -> dict:
         """Generate sample data for testing"""
         try:
@@ -291,10 +291,10 @@ class AnimalDiseasePredictor:
                 'success': False,
                 'error': f"Invalid animal type: {animal_type_str}"
             }
-        
+
         try:
             sample_data = self.data_loader.load_sample_data(animal_type_str, n_samples)
-            
+
             if save_path:
                 self.data_loader.save_data(sample_data, save_path)
                 return {
@@ -312,7 +312,175 @@ class AnimalDiseasePredictor:
                     'data': sample_data.to_dict('records'),
                     'columns': list(sample_data.columns)
                 }
-                
+
+        except Exception as e:
+            return {
+                'success': False,
+                'error': str(e)
+            }
+
+    def preprocess_dairy_data(self, data_file: str = "data/dairy_realistic_health_dataset.csv",
+                             save_path: str = "data/preprocessed_dairy_data.csv") -> dict:
+        """Preprocess the dairy dataset: load, inspect, handle missing values, encode, scale, save"""
+        import pandas as pd
+        from sklearn.preprocessing import StandardScaler
+
+        try:
+            # Load data
+            data = self.data_loader.load_data(data_file)
+
+            # Inspect structure
+            inspection = {
+                'columns': list(data.columns),
+                'data_types': {k: str(v) for k, v in data.dtypes.items()},
+                'missing_values': data.isnull().sum().to_dict(),
+                'shape': data.shape
+            }
+
+            # Handle missing values
+            # For numerical columns, impute with mean; for categorical, with mode
+            for col in data.columns:
+                if data[col].dtype in ['float64', 'int64']:
+                    data[col].fillna(data[col].mean(), inplace=True)
+                else:
+                    data[col].fillna(data[col].mode()[0], inplace=True)
+
+            # Encode categorical features
+            categorical_cols = data.select_dtypes(include=['object']).columns
+            data = pd.get_dummies(data, columns=categorical_cols, drop_first=True)
+
+            # Scale numerical features
+            numerical_cols = data.select_dtypes(include=['float64', 'int64']).columns
+            scaler = StandardScaler()
+            data[numerical_cols] = scaler.fit_transform(data[numerical_cols])
+
+            # Save preprocessed data
+            data.to_csv(save_path, index=False)
+
+            return {
+                'success': True,
+                'inspection': inspection,
+                'preprocessing_steps': [
+                    'Handled missing values: imputed numerical with mean, categorical with mode',
+                    'Encoded categorical features using one-hot encoding',
+                    'Scaled numerical features using StandardScaler'
+                ],
+                'saved_to': save_path,
+                'final_shape': data.shape
+            }
+
+        except Exception as e:
+            return {
+                'success': False,
+                'error': str(e)
+            }
+
+    def preprocess_beef_data(self, data_file: str = "data/beef_realistic_health_dataset.csv",
+                             save_path: str = "data/preprocessed_beef_data.csv") -> dict:
+        """Preprocess the beef dataset: load, inspect, handle missing values, encode, scale, save"""
+        import pandas as pd
+        from sklearn.preprocessing import StandardScaler
+
+        try:
+            # Load data
+            data = self.data_loader.load_data(data_file)
+
+            # Inspect structure
+            inspection = {
+                'columns': list(data.columns),
+                'data_types': {k: str(v) for k, v in data.dtypes.items()},
+                'missing_values': data.isnull().sum().to_dict(),
+                'shape': data.shape
+            }
+
+            # Handle missing values
+            # For numerical columns, impute with mean; for categorical, with mode
+            for col in data.columns:
+                if data[col].dtype in ['float64', 'int64']:
+                    data[col].fillna(data[col].mean(), inplace=True)
+                else:
+                    data[col].fillna(data[col].mode()[0], inplace=True)
+
+            # Encode categorical features
+            categorical_cols = data.select_dtypes(include=['object']).columns
+            data = pd.get_dummies(data, columns=categorical_cols, drop_first=True)
+
+            # Scale numerical features
+            numerical_cols = data.select_dtypes(include=['float64', 'int64']).columns
+            scaler = StandardScaler()
+            data[numerical_cols] = scaler.fit_transform(data[numerical_cols])
+
+            # Save preprocessed data
+            data.to_csv(save_path, index=False)
+
+            return {
+                'success': True,
+                'inspection': inspection,
+                'preprocessing_steps': [
+                    'Handled missing values: imputed numerical with mean, categorical with mode',
+                    'Encoded categorical features using one-hot encoding',
+                    'Scaled numerical features using StandardScaler'
+                ],
+                'saved_to': save_path,
+                'final_shape': data.shape
+            }
+
+        except Exception as e:
+            return {
+                'success': False,
+                'error': str(e)
+            }
+
+    def preprocess_poultry_data(self, data_file: str = "data/poultry_realistic_health_dataset.csv",
+                                 save_path: str = "data/preprocessed_poultry_data.csv") -> dict:
+        """Preprocess the poultry dataset: load, inspect, handle missing values, encode, scale, save"""
+        import pandas as pd
+        from sklearn.preprocessing import StandardScaler
+
+        try:
+            # Load data
+            data = self.data_loader.load_data(data_file)
+
+            # Inspect structure
+            inspection = {
+                'columns': list(data.columns),
+                'data_types': {k: str(v) for k, v in data.dtypes.items()},
+                'missing_values': data.isnull().sum().to_dict(),
+                'shape': data.shape
+            }
+
+            # Handle missing values
+            # For numerical columns, impute with mean; for categorical, with mode
+            for col in data.columns:
+                if data[col].dtype in ['float64', 'int64']:
+                    data[col].fillna(data[col].mean(), inplace=True)
+                else:
+                    data[col].fillna(data[col].mode()[0], inplace=True)
+
+            # Encode categorical features
+            categorical_cols = data.select_dtypes(include=['object']).columns
+            data = pd.get_dummies(data, columns=categorical_cols, drop_first=True)
+
+            # Scale numerical features
+            numerical_cols = data.select_dtypes(include=['float64', 'int64']).columns
+            scaler = StandardScaler()
+            data[numerical_cols] = scaler.fit_transform(data[numerical_cols])
+
+            # Save preprocessed data
+            data.to_csv(save_path, index=False)
+
+            return {
+                'success': True,
+                'inspection': inspection,
+                'preprocessing_steps': [
+                    'Handled missing values: imputed numerical with mean, categorical with mode',
+                    'Encoded categorical features using one-hot encoding',
+                    'Scaled numerical features using StandardScaler'
+                ],
+                'saved_to': save_path,
+                'final_shape': data.shape
+            }
+
         except Exception as e:
             return {
                 'success': False,
@@ -349,8 +517,8 @@ Examples:
         """
     )
     
-    parser.add_argument('--mode', choices=['train', 'predict', 'batch', 'validate', 
-                                          'diseases', 'info', 'models', 'sample'],
+    parser.add_argument('--mode', choices=['train', 'predict', 'batch', 'validate',
+                                          'diseases', 'info', 'models', 'sample', 'preprocess'],
                        required=True, help='Operation mode')
     parser.add_argument('--animal-type', choices=['livestock', 'poultry'], 
                        help='Type of animal (required for most modes)')
@@ -442,12 +610,35 @@ Examples:
         if not args.animal_type:
             print("Error: --animal-type required for sample generation")
             return
-        
+
         result = predictor.generate_sample_data(
-            args.animal_type, 
-            args.n_samples, 
+            args.animal_type,
+            args.n_samples,
             args.save_path
         )
+
+    elif args.mode == 'preprocess':
+        if not args.animal_type:
+            print("Error: --animal-type required for preprocessing")
+            return
+        if args.animal_type == 'poultry':
+            result = predictor.preprocess_poultry_data(
+                args.data_file if args.data_file else "data/poultry_realistic_health_dataset.csv",
+                args.save_path if args.save_path else "data/preprocessed_poultry_data.csv"
+            )
+        elif args.animal_type == 'beef':
+            result = predictor.preprocess_beef_data(
+                args.data_file if args.data_file else "data/beef_realistic_health_dataset.csv",
+                args.save_path if args.save_path else "data/preprocessed_beef_data.csv"
+            )
+        elif args.animal_type == 'dairy':
+            result = predictor.preprocess_dairy_data(
+                args.data_file if args.data_file else "data/dairy_realistic_health_dataset.csv",
+                args.save_path if args.save_path else "data/preprocessed_dairy_data.csv"
+            )
+        else:
+            print(f"Error: Preprocessing not supported for {args.animal_type}")
+            return
     
     # Output result
     if args.save_path:
